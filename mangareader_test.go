@@ -1,6 +1,7 @@
-package mangareader
+package main
 
 import (
+	"github.com/manga-community/mangareader-scrapper/mangareader"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -11,7 +12,7 @@ const (
 )
 
 func TestMangaReadGetInfo(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 	name, issueNumber := mr.GetInfo(URL)
 
 	assert.Equal(t, "naruto", name)
@@ -19,9 +20,9 @@ func TestMangaReadGetInfo(t *testing.T) {
 }
 
 func TestRetrieveMangaReaderImageLinks(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 
-	comic := new(Comic)
+	comic := new(mangareader.Comic)
 	comic.URLSource = URL
 	comic.Name = "naruto"
 	comic.IssueNumber = "1"
@@ -34,9 +35,9 @@ func TestRetrieveMangaReaderImageLinks(t *testing.T) {
 }
 
 func TestSetupMangaReader(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 
-	comic := new(Comic)
+	comic := new(mangareader.Comic)
 	comic.Name = "naruto"
 	comic.IssueNumber = "1"
 	comic.URLSource = URL
@@ -49,7 +50,7 @@ func TestSetupMangaReader(t *testing.T) {
 }
 
 func TestMangareaderRetrieveIssueLinks(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 	issues, err := mr.RetrieveIssueLinks("https://www.mangareader.net/naruto", false, false)
 
 	assert.Nil(t, err)
@@ -57,7 +58,7 @@ func TestMangareaderRetrieveIssueLinks(t *testing.T) {
 }
 
 func TestMangareaderRetrieveIssueLinksLast(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 	issues, err := mr.RetrieveIssueLinks("https://www.mangareader.net/naruto", false, true)
 
 	assert.Nil(t, err)
@@ -65,7 +66,7 @@ func TestMangareaderRetrieveIssueLinksLast(t *testing.T) {
 }
 
 func TestMangaReaderRetrieveLastIssueLink(t *testing.T) {
-	mr := new(Mangareader)
+	mr := new(mangareader.Mangareader)
 	issue, err := mr.RetrieveLastIssue("https://www.mangareader.net/naruto")
 
 	assert.Nil(t, err)
