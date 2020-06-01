@@ -1,5 +1,28 @@
 # github.com/anaskhan96/soup v1.1.1
 github.com/anaskhan96/soup
+# github.com/bake/mangadex v0.0.0-20200308152818-cb733691b670
+github.com/bake/mangadex
+# github.com/davecgh/go-spew v1.1.0
+github.com/davecgh/go-spew/spew
+# github.com/gosimple/slug v1.9.0
+github.com/gosimple/slug
+# github.com/imroc/req v0.3.0
+github.com/imroc/req
+# github.com/nokusukun/jikan2go v0.2.2
+github.com/nokusukun/jikan2go/anime
+github.com/nokusukun/jikan2go/common
+github.com/nokusukun/jikan2go/mal_types
+github.com/nokusukun/jikan2go/utils
+# github.com/pkg/errors v0.9.1
+github.com/pkg/errors
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be
+github.com/rainycape/unidecode
+# github.com/stretchr/testify v1.6.0
+github.com/stretchr/testify/assert
 # golang.org/x/net v0.0.0-20200506145744-7e3656a0809f
 golang.org/x/net/html
 golang.org/x/net/html/atom
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+gopkg.in/yaml.v3
